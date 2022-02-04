@@ -6,10 +6,13 @@ import css from "./CardDisplay.module.css";
 function CardDisplay() {
   return (
     <div className={css.cardMain}>
-      <div className={css.cardDiv}>
+      <div className={css.container}>
+        <Card />
+        <Card />
+        <Card />
         <Card />
       </div>
-      <div className={css.btns}>
+      <div className={css.container}>
         <BtnContainer />
       </div>
     </div>

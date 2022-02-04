@@ -1,3 +1,12 @@
+.container {
+  text-align: center;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fit, 300px);
+  grid-template-rows: repeat(auto-fit, auto);
+  justify-content: center;
+  margin: 0 1em;
+}
 .cardMain {
   margin: 0px 40px 20px auto;
   background-color: rgba(100, 148, 237, 0.411);
@@ -11,12 +20,12 @@
   left: 18%;
 }
 
-.cardDiv {
+/* .cardDiv {
   margin: 20px auto 20px auto;
   height: 60vh;
   width: 45vw;
   background-color: darkgoldenrod;
-}
+} */
 
 .btns {
   background-color: darkmagenta;
