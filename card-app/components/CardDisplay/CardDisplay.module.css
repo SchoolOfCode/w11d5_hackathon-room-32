@@ -9,9 +9,6 @@
 }
 .cardMain {
   margin: 0px 40px 20px auto;
-  background-color: rgba(100, 148, 237, 0.411);
-  color: bisque;
-  border: 3px solid blue;
   border-radius: 10px;
   height: 80vh;
   width: 90vh;
@@ -20,15 +17,7 @@
   left: 18%;
 }
 
-/* .cardDiv {
-  margin: 20px auto 20px auto;
-  height: 60vh;
-  width: 45vw;
-  background-color: darkgoldenrod;
-} */
-
 .btns {
-  background-color: darkmagenta;
   height: 10vh;
   width: 30vw;
   margin: 0 auto 0 auto;

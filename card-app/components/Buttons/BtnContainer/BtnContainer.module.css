@@ -1,7 +1,6 @@
 .btnContainer {
   height: 10vh;
   width: 60vw;
-  background-color: chartreuse;
   display: flex;
   flex-direction: row;
   justify-content: center;
