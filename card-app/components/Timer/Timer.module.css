@@ -1,4 +1,4 @@
-.timer {
+@import url("http://fonts.cdnfonts.com/css/orbitron");.timer {
   background-color: coral;
   width: 7rem;
   height: 7rem;
@@ -6,10 +6,10 @@
   border-radius: 60px;
   justify-content: center;
   align-content: center;
-}
-
-.time {
+}.time {
   justify-self: center;
   align-self: center;
-  margin: 2.3rem auto 3.5rem 0.7rem;
+  margin: 2.3rem auto 3.5rem 2.6rem;
+  color: white;
+  font-family: orbitron;
 }
