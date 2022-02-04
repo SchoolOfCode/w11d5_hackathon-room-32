@@ -4,7 +4,7 @@ import css from "./IncreaseBtn.module.css";
 function IncreaseBtn() {
   return (
     <div>
-      <button>Increase</button>
+      <button className={css.btn}>Increase</button>
     </div>
   );
 }

@@ -4,7 +4,7 @@ import css from "./NewGameBtn.module.css";
 function NewGameBtn() {
   return (
     <div>
-      <button>New Game Button</button>
+      <button className={css.btn}>New Game Button</button>
     </div>
   );
 }
