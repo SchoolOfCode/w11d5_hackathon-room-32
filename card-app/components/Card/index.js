@@ -1,12 +1,23 @@
 import React from "react";
 import css from "./Card.module.css";
 
-function Card() {
+function Card({image, handleClick, id, isSelected}) {
+
+  function getId(){
+    return id;
+  }
+
+  const selectedStyle = ()=>{
+    return isSelected ? {} : {"opacity": "0.2"}
+  }
+
   return (
-    <div>
+    <div style={selectedStyle()} onClick={()=>{
+      handleClick(getId())
+    }}>
       <img
-        src="../../public/four-hearts-playing-card-isolated-260nw-134168915.jpg"
-        alt=""
+        src={image}
+        alt="card"
       />
     </div>
   );
