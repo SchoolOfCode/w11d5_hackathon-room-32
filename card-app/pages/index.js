@@ -1,6 +1,7 @@
 import css from "./index.module.css";
 import Timer from "../components/Timer";
 import CardDisplay from "../components/CardDisplay";
+import BtnContainer from "../components/Buttons/BtnContainer";
 
 import { useState, useEffect } from "react";
 
@@ -14,12 +15,11 @@ export default function Home() {
   // Reshuffle the deck
   // https://deckofcardsapi.com/api/deck/<<deck_id>>/shuffle/
 
-
-
   return (
     <div className={css.main}>
       <Timer />
-      <CardDisplay className={css.cardDisplay} />
+      <CardDisplay />
+      <BtnContainer />
     </div>
   );
 }

@@ -1,11 +1,10 @@
 import React from "react";
 import Card from "../Card";
-import BtnContainer from "../Buttons/BtnContainer";
+
 import css from "./CardDisplay.module.css";
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 
 function CardDisplay() {
-
   const [selectedCards, setSelectedCards] = useState([]);
   const [drawnCards, setDrawnCards] = useState([]);
   const [deck, setDeck] = useState({});
@@ -32,61 +31,61 @@ function CardDisplay() {
         `https://deckofcardsapi.com/api/deck/${deck.deck_id}/draw/?count=${cardsToDraw}`
       );
       const data = await response.json();
-      const cards = data.cards.flatMap((data)=>[data, data]);
+      const cards = data.cards.flatMap((data) => [data, data]);
       console.log("Cards:", cards);
       setDrawnCards(cards);
     }
     fetchCards(deck.deck_id, 2);
   }, [deck]);
 
-  function handleCardSelect(id){
-    if(selectedCards.includes(id)) return;
-    setSelectedCards(()=>{
-      return [...selectedCards, id]
-    })
+  function handleCardSelect(id) {
+    if (selectedCards.includes(id)) return;
+    setSelectedCards(() => {
+      return [...selectedCards, id];
+    });
   }
 
   useEffect(() => {
-    function handleCardSelection(){
-      console.log(selectedCards)
+    function handleCardSelection() {
+      console.log(selectedCards);
 
-      if(selectedCards.length >= 2){
-        if(selectedCards[0].substr(0,2) === selectedCards[1].substr(0,2)){
-          console.log("Cards match!")
+      if (selectedCards.length >= 2) {
+        if (selectedCards[0].substr(0, 2) === selectedCards[1].substr(0, 2)) {
+          console.log("Cards match!");
           //Remove matched cards from play..
-          setDrawnCards(()=>{
-            return drawnCards.filter((card)=>{
-              return card.code !== selectedCards[0].substr(0,2);
-            })
-          })
-        }
-        else{
-          console.log("Cards don't match..")
+          setDrawnCards(() => {
+            return drawnCards.filter((card) => {
+              return card.code !== selectedCards[0].substr(0, 2);
+            });
+          });
+        } else {
+          console.log("Cards don't match..");
         }
         //Deselect cards
         setTimeout(() => {
           setSelectedCards([]);
         }, 200);
-
       }
     }
     handleCardSelection();
-
   }, [selectedCards]);
 
-
-
   return (
-
     <div className={css.cardMain}>
-    <div className={css.container}>
-      {drawnCards.map((card, index)=>{
-        return <Card key={index} id={card.code+"-"+index} image={card.image} handleClick={handleCardSelect} isSelected={selectedCards.includes(card.code+"-"+index)} />
-      })}
+      <div className={css.container}>
+        {drawnCards.map((card, index) => {
+          return (
+            <Card
+              key={index}
+              id={card.code + "-" + index}
+              image={card.image}
+              handleClick={handleCardSelect}
+              isSelected={selectedCards.includes(card.code + "-" + index)}
+            />
+          );
+        })}
       </div>
-<div className={css.btns}>
-      <BtnContainer />
-        </div>
+      <div className={css.btns}></div>
     </div>
   );
 }
