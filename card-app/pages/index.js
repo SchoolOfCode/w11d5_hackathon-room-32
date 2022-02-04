@@ -47,9 +47,9 @@ export default function Home() {
   }, [deck]);
 
   return (
-    <div>
+    <div className={css.main}>
       <Timer />
-      <CardDisplay />
+      <CardDisplay className={css.cardDisplay} />
     </div>
   );
 }

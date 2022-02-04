@@ -5,12 +5,13 @@ import css from "./CardDisplay.module.css";
 
 function CardDisplay() {
   return (
-    <div>
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <BtnContainer />
+    <div className={css.cardMain}>
+      <div className={css.cardDiv}>
+        <Card />
+      </div>
+      <div className={css.btns}>
+        <BtnContainer />
+      </div>
     </div>
   );
 }

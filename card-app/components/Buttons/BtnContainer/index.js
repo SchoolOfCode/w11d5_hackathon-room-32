@@ -6,8 +6,7 @@ import css from "./BtnContainer.module.css";
 
 function BtnContainer() {
   return (
-    <div>
-      <h1>Container for buttons</h1>
+    <div className={css.btnContainer}>
       <DecreaseBtn />
       <IncreaseBtn />
       <NewGameBtn />
