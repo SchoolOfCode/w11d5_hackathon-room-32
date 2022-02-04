@@ -12,7 +12,7 @@ function CardDisplay() {
         <Card />
         <Card />
       </div>
-      <div className={css.container}>
+      <div className={css.btns}>
         <BtnContainer />
       </div>
     </div>
