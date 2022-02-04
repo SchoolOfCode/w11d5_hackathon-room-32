@@ -1,6 +1,7 @@
 import React from "react";
 import css from "./Card.module.css";
 import cardBack from "../../public/card-back.png"
+import Image from "next/image"
 
 function Card({image, handleClick, id, isSelected}) {
 
@@ -19,7 +20,7 @@ function Card({image, handleClick, id, isSelected}) {
     <div onClick={()=>{
       handleClick(getId())
     }}>
-      <img
+      <Image
         src={selectedImg()}
         alt="card"
       />
