@@ -3,8 +3,8 @@ import css from "./Timer.module.css";
 
 function Timer() {
   return (
-    <div>
-      <h1>Timer Components</h1>
+    <div className={css.timer}>
+      <h1 className={css.time}>00:10</h1>
     </div>
   );
 }

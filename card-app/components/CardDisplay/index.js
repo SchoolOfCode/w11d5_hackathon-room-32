@@ -77,11 +77,16 @@ function CardDisplay() {
 
 
   return (
-    <div>
+
+    <div className={css.cardMain}>
+    <div className={css.container}>
       {drawnCards.map((card, index)=>{
         return <Card key={index} id={card.code+"-"+index} image={card.image} handleClick={handleCardSelect} isSelected={selectedCards.includes(card.code+"-"+index)} />
       })}
+      </div>
+<div className={css.btns}>
       <BtnContainer />
+        </div>
     </div>
   );
 }

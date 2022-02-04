@@ -12,6 +12,7 @@ function Card({image, handleClick, id, isSelected}) {
   }
 
   return (
+
     <div style={selectedStyle()} onClick={()=>{
       handleClick(getId())
     }}>

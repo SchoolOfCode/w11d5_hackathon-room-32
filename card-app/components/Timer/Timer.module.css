@@ -1,0 +1,15 @@
+.timer {
+  background-color: coral;
+  width: 7rem;
+  height: 7rem;
+  margin: 20px 20px 20px auto;
+  border-radius: 60px;
+  justify-content: center;
+  align-content: center;
+}
+
+.time {
+  justify-self: center;
+  align-self: center;
+  margin: 2.3rem auto 3.5rem 0.7rem;
+}
