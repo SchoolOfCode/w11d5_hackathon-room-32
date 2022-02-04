@@ -32,11 +32,11 @@ function CardDisplay() {
         `https://deckofcardsapi.com/api/deck/${deck.deck_id}/draw/?count=${cardsToDraw}`
       );
       const data = await response.json();
-      const cards = data.cards.flatMap((data)=>[data, data]);
+      const cards = data.cards.flatMap((data)=>[data, data]).sort(() => Math.random() - 0.5);
       console.log("Cards:", cards);
       setDrawnCards(cards);
     }
-    fetchCards(deck.deck_id, 2);
+    fetchCards(deck.deck_id, 3);
   }, [deck]);
 
   function handleCardSelect(id){

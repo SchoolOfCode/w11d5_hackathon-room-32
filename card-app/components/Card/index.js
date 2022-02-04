@@ -1,23 +1,26 @@
 import React from "react";
 import css from "./Card.module.css";
+import cardBack from "../../public/card-back.png"
 
 function Card({image, handleClick, id, isSelected}) {
+
+  console.log(cardBack)
 
   function getId(){
     return id;
   }
 
-  const selectedStyle = ()=>{
-    return isSelected ? {} : {"opacity": "0.2"}
+  const selectedImg = ()=>{
+    return isSelected ? image : cardBack.src
   }
 
   return (
 
-    <div style={selectedStyle()} onClick={()=>{
+    <div onClick={()=>{
       handleClick(getId())
     }}>
       <img
-        src={image}
+        src={selectedImg()}
         alt="card"
       />
     </div>
