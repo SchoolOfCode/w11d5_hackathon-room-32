@@ -4,7 +4,9 @@ import css from "./NewGameBtn.module.css";
 function NewGameBtn() {
   return (
     <div>
-      <button className={css.btn}>New Game Button</button>
+      <button onClick={()=>{
+        window.location.reload(false);
+      }} className={css.btn}>New Game Button</button>
     </div>
   );
 }
