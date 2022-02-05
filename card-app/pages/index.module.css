@@ -1,0 +1,11 @@
+.main {
+  background-color: rgb(41, 146, 20);
+  border: 5px solid rgb(129, 84, 25);
+  border-radius: 10px;
+  width: 80vw;
+  height: 90vh;
+  margin: 40px auto 5vw auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}

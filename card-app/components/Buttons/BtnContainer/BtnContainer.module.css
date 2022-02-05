@@ -1,0 +1,10 @@
+.btnContainer {
+  height: 10vh;
+  width: 60vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 140px;
+}
